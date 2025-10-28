@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "nome": "Camisa Social Branca",
+    "estilo": "social",
+    "cor": "branca",
+    "imagem": "camisa_social_branca.png",
+    "tags": ["formal", "trabalho"]
+  },
+  {
+    "id": "2",
+    "nome": "Camiseta Preta",
+    "estilo": "casual",
+    "cor": "preta",
+    "imagem": "camiseta_preta.png",
+    "tags": ["casual", "street"]
+  },
+  {
+    "id": "3",
+    "nome": "Calça Jeans Azul",
+    "estilo": "casual",
+    "cor": "azul",
+    "imagem": "calca_jeans_azul.png",
+    "tags": ["casual", "esporte"]
+  }
+  // ... até 100 itens
+]
