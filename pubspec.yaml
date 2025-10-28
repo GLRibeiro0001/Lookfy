@@ -29,7 +29,12 @@ flutter:
   uses-material-design: true
   assets:
     - assets/catalog/
+    
 flutter:
   uses-material-design: true
   assets:
     - assets/catalog/
+
+Execute o comando:
+sh
+flutter pub get
