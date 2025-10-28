@@ -29,8 +29,3 @@ flutter:
   uses-material-design: true
   assets:
     - assets/catalog/
-    
-flutter:
-  uses-material-design: true
-  assets:
-    - assets/catalog/
