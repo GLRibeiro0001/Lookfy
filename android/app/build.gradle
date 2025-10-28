@@ -1,0 +1,28 @@
+android {
+    compileSdkVersion 34
+
+    defaultConfig {
+        applicationId "br.com.seunome.lookfy"
+        minSdkVersion 21
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0.0"
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("lookfy.keystore")
+            storePassword "{{KEYSTORE_PASSWORD}}"
+            keyAlias "{{PLAYSTORE_KEY_ALIAS}}"
+            keyPassword "{{KEYSTORE_KEY_PASSWORD}}"
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            shrinkResources false
+            minifyEnabled false
+        }
+    }
+}
