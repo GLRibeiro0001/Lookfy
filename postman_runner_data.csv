@@ -1,0 +1,7 @@
+request_name,email,password,name,category,description,color_primary,occasion,temperature_c,mood,inventory
+Signup,gabriel@lookfy.com,123456,Gabriel Ribeiro,,,,,,,
+Login,gabriel@lookfy.com,123456,,,,,,,,
+AddItem,,,,camisa,Camisa social branca,branco,,,,
+GenerateLook,,,,,,,jantar casual,20,confortavel,"[1,2,3]"
+SaveLook,,,,,,,,,,"[1,2]"
+Planner,,,,,,,,,,1|2025-10-30
