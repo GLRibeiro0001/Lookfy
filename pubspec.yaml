@@ -1,4 +1,5 @@
 name: Build Flutter APK
+
 on:
   push:
     branches:
@@ -6,10 +7,12 @@ on:
   pull_request:
     branches:
       - main
+
 jobs:
   build:
     name: Build APK
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
