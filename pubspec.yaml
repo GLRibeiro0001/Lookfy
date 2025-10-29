@@ -1,9 +1,3 @@
-Perfeito, Gabriel 👇
-Aqui está uma versão corrigida, formatada e validada do seu pubspec.yaml, pronta pra substituir o arquivo atual (funciona tanto localmente quanto no GitHub Actions):
-
-
----
-
 name: lookfy
 description: Consultor de estilo masculino. Gera looks personalizados para cada ocasião.
 publish_to: "none"
