@@ -1,31 +1,41 @@
-name: lookfy
-description: Consultor de estilo masculino. Gera looks personalizados para cada ocasião.
-publish_to: "none"
-version: 1.0.0+1
+name: Build Flutter APK
 
-environment:
-  sdk: ">=3.0.0 <4.0.0"
+on:
+  push:
+    branches:
+      - main  # Altere se o branch principal tiver outro nome
+  pull_request:
+    branches:
+      - main
 
-dependencies:
-  flutter:
-    sdk: flutter
-  flutter_localizations:
-    sdk: flutter
-  flutter_riverpod: ^2.4.0
-  hive: ^2.2.3
-  hive_flutter: ^1.1.0
-  flutter_secure_storage: ^9.0.0
-  image_picker: ^1.0.8
-  camera: ^0.10.5+2
-  share_plus: ^7.2.2
+jobs:
+  build:
+    name: Build APK
+    runs-on: ubuntu-latest
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  hive_generator: ^2.0.0
-  build_runner: ^2.4.6
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-flutter:
-  uses-material-design: true
-  assets:
-    - assets/catalog/
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.24.0" # Altere conforme a versão do seu projeto
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze project (optional but good practice)
+        run: flutter analyze
+
+      - name: Run tests (optional)
+        run: flutter test || echo "No tests found"
+
+      - name: Build release APK
+        run: flutter build apk --release
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lookfy-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
